@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+		<title>Boolzapp</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title></title>
+    </head>
+    <body>
+        <header>
+            <div class="film">
+                <h1>film</h1>
+            </div>
+
+            <!-- JS: MY TEMPLATE -->
+    <script id="film-template" type="text/x-handlebars-template">
+     <ul class="film"
+       <li>TITOLO : {{title}}</li>
+       <li>TITOLO ORIGINALE : {{originalTitle}}</li>
+       <li>LINGUA ORIGINALE : {{lenguage}}</li>
+       <li>VOTO MEDIO : {{vote}}</li>
+
+     </ul>
+    </script>
+
+            <div class="logo">
+                <img src="https://w7.pngwing.com/pngs/219/256/png-transparent-phoenix-logo-flame-football-s-daquan-leaf-flower-symbol.png" alt="logo">
+
+                </div>
+                <div class="cerca">
+                    <h1>boolflix</h1>
+                    <input class="cerca"  placeholder="Cerca UN FILM" name="search">
+                    <button type="button" name="button" id="tasto">cerca</button>
+                </div>
+        </header>
+        <ul class="film-container">
+
+        </ul>
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
