@@ -29,3 +29,33 @@ header
     display: flex;
     justify-content: flex-start;
 }
+
+body{
+    background-color: #333;
+}
+
+
+.titolo-ricerca {
+    color: white;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.titolo-ricerca.visible {
+    display: block;
+}
+
+#risultati {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.film {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+    list-style-type: none;
+}

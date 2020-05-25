@@ -12,20 +12,8 @@
     </head>
     <body>
         <header>
-            <div class="film">
-                <h1>film</h1>
-            </div>
 
-            <!-- JS: MY TEMPLATE -->
-    <script id="film-template" type="text/x-handlebars-template">
-     <ul class="film"
-       <li>TITOLO : {{title}}</li>
-       <li>TITOLO ORIGINALE : {{originalTitle}}</li>
-       <li>LINGUA ORIGINALE : {{lenguage}}</li>
-       <li>VOTO MEDIO : {{vote}}</li>
 
-     </ul>
-    </script>
 
             <div class="logo">
                 <img src="https://w7.pngwing.com/pngs/219/256/png-transparent-phoenix-logo-flame-football-s-daquan-leaf-flower-symbol.png" alt="logo">
@@ -33,13 +21,31 @@
                 </div>
                 <div class="cerca">
                     <h1>boolflix</h1>
-                    <input class="cerca"  placeholder="Cerca UN FILM" name="search">
+                    <input id="testo-ricerca"  placeholder="Cerca UN FILM" name="search">
                     <button type="button" name="button" id="tasto">cerca</button>
                 </div>
         </header>
+        <div clas ="container">
+            <h2 class="titolo-ricerca">
+                          Risultati ricerca per:
+                          "<span id="ricerca-utente"></span>"
+                      </h2>
+                      <main id="risultati"></main>
+      </div>
+
         <ul class="film-container">
 
         </ul>
+        <!-- JS: MY TEMPLATE -->
+<script id="film-template" type="text/x-handlebars-template">
+ <ul class="film">
+ <li>{{ titolo }}</li>
+           <li>{{ titolo_originale }}</li>
+           <li>{{ lingua }}</li>
+           <li>{{ voto }}</li>
+
+ </ul>
+</script>
         <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
