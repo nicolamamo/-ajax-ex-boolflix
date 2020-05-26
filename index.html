@@ -6,9 +6,12 @@
 		<title>Boolzapp</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/1e3e5f2200.js" crossorigin="anonymous"></script>
+
+
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <title></title>
+
     </head>
     <body>
         <header>
@@ -39,13 +42,19 @@
         <!-- JS: MY TEMPLATE -->
 <script id="film-template" type="text/x-handlebars-template">
  <ul class="film">
- <li>{{ titolo }}</li>
-           <li>{{ titolo_originale }}</li>
-           <li>{{ lingua }}</li>
-           <li>{{ voto }}</li>
-
+     <li>Titolo: {{ titolo }}</li>
+                <li>Titolo originale: {{ titolo_originale }}</li>
+                <li>Lingua: {{{ lingua }}}</li>
+                <li>Voto: {{{ voto }}}</li>
+                <li>Tipo: {{{ tipo }}}</li>
  </ul>
 </script>
-        <script src="main.js" charset="utf-8"></script>
+
+<!-- template bandiera -->
+      <script id="bandiera-template" type="text/x-handlebars-template">
+          <img class="bandierina" src="flags/{{ codice_lingua }}.png" alt="{{ codice_lingua }}">
+      </script>
+
+        <script src="script.js" charset="utf-8"></script>
     </body>
 </html>
