@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    alert('gggg');
+
+
 
     // preparo le variabili per handlebars
     var template_html = $('#film-template').html();
@@ -134,7 +135,7 @@ if (bandiere_disponibili.includes(lingua)) {
 
 function normalizza_voto (voto){
     var voto= voto / 2
-    return Math.ceil(voto5)//arrotondo per eccesso
+    return Math.ceil(voto)//arrotondo per eccesso
 
 }
 
