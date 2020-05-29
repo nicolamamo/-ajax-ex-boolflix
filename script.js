@@ -110,7 +110,8 @@ $(document).ready(function() {
             'titolo_originale': dati.original_title,
             'lingua':bandiera_lingua(dati.original_language) ,//indice funzione
             'voto': stelline(normalizza_voto(dati.vote_average)),
-            'path_copertina' : api_img_url_base + dimensione_img + dati.poster_path // varibili gia definite prese da chiamata
+            'path_copertina' : api_img_url_base + dimensione_img + dati.poster_path,// varibili gia definite prese da chiamata
+            'trama':dati.overview
 
         };
         if (dati.posterpath !== null) {
@@ -135,14 +136,15 @@ function bandiera_lingua (lingua){
     var bandiere_disponibili = ['en','fr','ger','it'] ;
     // verifico se la lingua ha classe corrispondente nell' array
     if (bandiere_disponibili.includes(lingua)) {
-        //restituisco immagine corrispondente (template o html)
-        // rivere!! return '<img src="flags/' + lingua +  ' png" alt="' + lingua+'' >';
+        //restituisco immagine corrispondente (template )
+        // html rivedere!! return '<img src="flags/' + lingua +  ' png" alt="' + lingua+'' >';
         //inserisco handlebar
         var placeholder = {'codice_lingua': lingua};
         var img_bandiera = template_bandiera(placeholder);
     }
 
     return img_bandiera ;
+
 
 
 }

@@ -34,11 +34,12 @@
                           "<span id="ricerca-utente"></span>"
                       </h2>
                       <main id="risultati"></main>
-      </div>
+
 
         <ul class="film-container">
 
         </ul>
+        </div>
         <!-- JS: MY TEMPLATE -->
 <script id="film-template" type="text/x-handlebars-template">
  <ul class="film">
@@ -50,6 +51,7 @@
                 <li>Lingua: {{{ lingua }}}</li>
                 <li>Voto: {{{ voto }}}</li>
                 <li>Tipo: {{{ tipo }}}</li>
+                <li>Titolo: {{ trama }}</li>
 
 
  </ul>
@@ -60,7 +62,7 @@
           <img class="bandierina" src="flags/{{ codice_lingua }}.png" alt="{{ codice_lingua }}">
       </script>
 
-        <script src="script.js" charset="utf-8"></script>
 
+        <script src="script.js" charset="utf-8"></script>
     </body>
 </html>
